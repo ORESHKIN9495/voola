@@ -1,24 +1,39 @@
 <template>
-  <main></main>
+  <main>
+    <hero />
+    <service />
+    <cryptocard />
+    <begin />
+    <cryptocurrency />
+    <progres />
+    <wallet />
+    <staking />
+    <footr />
+  </main>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+@font-face {
+  font-family: 'renner';
+  src: url('../src/assets/fonts/renner/renner-light.otf');
+}
 :root {
   // project color palete
   --scheme-v1: #ffffff; // primary scheme
-  --scheme-v2: #ffffff;
-  --scheme-v3: #ffffff;
-  --scheme-v4: #ffffff;
+  --scheme-v2: #000000;
+  --scheme-v3: #4e94d7;
+  --scheme-v4: #62686d;
 
   // project font-family
-  --scheme-font: 'Helvetica', sans-serif;
-  --scheme-h: 46px;
-  --scheme-m: 32px;
-  --scheme-s: 18px;
+  --scheme-font: 'renner', sans-serif;
+  --scheme-h: 56px;
+  --scheme-m: 44px;
+  --scheme-s: 24px;
 
   // project default template width
-  --scheme-max-width: 1280px; // desktop
+  --scheme-max-width: 1440px;
+  --scheme-max-width-wrapper: 1220px; // desktop
   --scheme-min-width: 320px; // 5 SE
 
   // project default template height
@@ -39,10 +54,11 @@
 html,
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--scheme-v2);
+  background: var(--scheme-v1);
   color: var(--scheme-v1);
 
   font: 300 17px / 1.64 var(--scheme-font);
@@ -57,6 +73,7 @@ body {
 main,
 section {
   position: relative;
+  margin: 0 auto;
 }
 
 h1,
@@ -85,7 +102,7 @@ h3 {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 b {
@@ -93,6 +110,8 @@ b {
 }
 
 p {
+  color: var(--scheme-v4);
+  font-size: 20px;
   margin: 0;
 }
 
