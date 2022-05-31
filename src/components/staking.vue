@@ -9,11 +9,13 @@
           receive interest for keeping money in a bank account or providing it to a bank for investment. This system assumes a guaranteed income and a predictable source of income.
         </p>
       </h2>
+
       <img src="../assets/images/graph/graph.png" srcset="../assets/images/graph/graph@2x.png" alt="graph" />
     </article>
 
     <article class="staking__item">
       <img src="../assets/images/crystal/crystal.png" srcset="../assets/images/crystal/crystal@2x.png" alt="crystals" />
+
       <h2>
         Acquisition of NFT
         <p>
@@ -33,24 +35,31 @@
           "Crypto Voucher" is a payment system that simplifies the possibility of buying cryptocurrencies. A huge number of ways to purchase a Voucher makes the platform accessible
           to citizens of many countries. The following methods are offered for buying a Voucher:
         </p>
+
         <span>
           <img src="../assets/images/purchase/purchase.png" srcset="../assets/images/purchase/purchase@2x.png" alt="purchase" />
+
           <p>Purchase of a Voucher in terminals located in public places</p>
         </span>
+
         <span>
           <img src="../assets/images/mobilephone/mobilephone.png" srcset="../assets/images/mobilephone/mobilephone@2x.png" alt="mobile app" />
+
           <p>Purchase of a Voucher, through the mobile application "Viola Wallet"</p>
         </span>
+
         <p>
           Crypto Voucher will save you time rather than paying with bank cards. This payment system offers the cheapest way to buy cryptocurrencies, guaranteeing reliability and
           security. No matter how you bought Crypto Voucher, you can buy, exchange and make transactions with cryptocurrency in an instant!
         </p>
       </h2>
+
       <img src="../assets/images/voucher/voucher.png" srcset="../assets/images/voucher/voucher@2x.png" alt="voucher" />
     </article>
 
     <article class="staking__item">
       <img src="../assets/images/market/market.png" srcset="../assets/images/market/market@2x.png" alt="marketplace " />
+
       <h2>
         AR NFT Marketplace
         <p>
@@ -70,78 +79,68 @@ export default {}
 
 <style lang="scss" scoped>
 .staking {
+  margin: var(--scheme-gap) auto 0 auto;
   max-width: var(--scheme-max-width-wrapper);
-  margin: 0 auto;
-  p {
-    font-size: 20px;
-  }
-  h2 {
-    font-size: 44px;
-  }
 
   &__item {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-
     padding: 20px;
-    align-items: center;
 
     img {
       max-width: 500px;
-      max-height: 500px;
       width: 100%;
-      height: 100%;
     }
+
     h2 {
       max-width: 600px;
-      color: var(--scheme-v2);
+
       span {
-        display: flex;
         align-items: center;
+        display: flex;
+        margin-top: 20px;
 
         img {
-          width: 72px;
-          height: 100%;
+          max-width: 72px;
         }
+
         p {
           color: var(--scheme-v2);
+          font-size: 22px;
+          font-weight: bold;
           margin: 0 0 0 20px;
+          max-width: 349px;
         }
       }
 
       p {
         margin: 40px 0;
-        color: var(--scheme-v4);
-        font-size: 20px;
       }
     }
+
     &:nth-child(2) {
       img {
-        max-width: 533.5px;
-        height: 100%;
+        max-width: 533px;
+        width: 100%;
       }
     }
-    &:nth-child(3) {
-      img {
-        max-width: 625px;
-        height: 100%;
-      }
-    }
+
     &:last-child {
       img {
+        margin: 0 100px 0 0;
         max-width: 536px;
-        max-height: 760px;
-        height: 100%;
       }
     }
   }
 }
 
-@media only screen and(max-width: 1110px) {
+@media only screen and(max-width: 1050px) {
   .staking {
     &__item {
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
+
       span {
         img {
           display: block;
@@ -153,14 +152,20 @@ export default {}
       }
       h2 {
         max-width: 100%;
+        font-size: 28px;
+
+        p {
+          font-size: 16px;
+        }
       }
 
       &:nth-child(2) {
         img {
-          order: 2;
           display: block;
+          order: 2;
         }
       }
+
       &:last-child {
         display: none;
       }

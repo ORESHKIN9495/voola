@@ -21,26 +21,26 @@ export default {}
 <style lang="scss" scoped>
 .phone {
   display: flex;
+
   &__item {
     display: flex;
     flex-direction: column;
-    margin-top: -220px;
+    margin-top: -240px;
+    margin-right: -20px;
     filter: drop-shadow(-14px 16px 28px rgba(0, 0, 0, 0.04)) drop-shadow(-24px 36px 48px rgba(0, 0, 0, 0.1));
 
     img {
-      max-height: 540px;
-      max-width: 252px;
-      width: 100%;
-      padding: 20px;
+      width: 252px;
+      margin: 20px;
     }
 
     &:last-child {
-      margin-top: -352px;
+      margin-top: -370px;
     }
   }
 }
 
-@media only screen and(max-width:784px) {
+@media only screen and(max-width:1080px) {
   .phone {
     &__item {
       display: flex;
@@ -49,7 +49,7 @@ export default {}
       order: 2;
 
       img {
-        min-width: 192px;
+        width: 192px;
       }
 
       &:last-child {

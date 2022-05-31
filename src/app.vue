@@ -1,15 +1,18 @@
 <template>
   <main>
-    <hero />
-    <service />
-    <cryptocard />
-    <begin />
-    <cryptocurrency />
-    <progres />
-    <wallet />
-    <staking />
-    <footr />
+    <Hero />
+    <Service />
+    <Cryptocard />
+    <Begin />
+    <Cryptocurrency />
+    <Progres />
+    <Wallet />
+    <Staking />
   </main>
+
+  <footer>
+    <Footer />
+  </footer>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -24,6 +27,8 @@
   --scheme-v2: #000000;
   --scheme-v3: #4e94d7;
   --scheme-v4: #62686d;
+  --scheme-v5: rgba(29, 28, 40, 0.5);
+  --scheme-v6: #f4f7fc;
 
   // project font-family
   --scheme-font: 'renner', sans-serif;
@@ -33,7 +38,7 @@
 
   // project default template width
   --scheme-max-width: 1440px;
-  --scheme-max-width-wrapper: 1220px; // desktop
+  --scheme-max-width-wrapper: 1300px; // desktop
   --scheme-min-width: 320px; // 5 SE
 
   // project default template height
@@ -74,6 +79,8 @@ main,
 section {
   position: relative;
   margin: 0 auto;
+
+  // background: red;
 }
 
 h1,
@@ -81,23 +88,21 @@ h2,
 h3,
 h4,
 h5 {
+  color: var(--scheme-v2);
   font-weight: 300;
   margin: 0;
 }
 
 h1 {
   font: 300 var(--scheme-h) / 1.42 var(--scheme-font);
-  margin: 8rem 0 2rem;
 }
 
 h2 {
   font: 300 var(--scheme-m) / 1.42 var(--scheme-font);
-  margin: 0 0 2rem;
 }
 
 h3 {
   font: 400 var(--scheme-s) / 1.42 var(--scheme-font);
-  margin: 0 0 1rem;
 }
 
 a {
@@ -150,14 +155,22 @@ picture {
 
 input,
 button {
-  background: none;
+  background: var(--scheme-v3);
   border: none;
+  border-radius: 16px;
   box-shadow: none;
+  color: var(--scheme-v1);
 
   font: var(--scheme-font);
 
   margin: 0;
   outline: none;
   padding: 0;
+}
+
+button {
+  height: 60px;
+  margin: 98px 0 40px 0;
+  width: 280px;
 }
 </style>

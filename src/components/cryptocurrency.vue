@@ -46,64 +46,67 @@ export default {}
 
 <style lang="scss" scoped>
 .cryptocurrency {
-  max-width: var(--scheme-max-width-wrapper);
   margin: 0 auto;
+  max-width: var(--scheme-max-width-wrapper);
+  padding: 20px;
 
   &__item {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-
-    padding: 20px;
-    align-items: center;
 
     span {
       font-weight: bold;
     }
 
     img {
+      margin: 120px 0;
       max-width: 630px;
-      max-height: 472px;
       width: 100%;
-      height: 100%;
     }
+
     h2 {
       max-width: 547px;
-      color: var(--scheme-v2);
 
       p {
         margin: 40px 0 0 0;
-        color: var(--scheme-v4);
-        font-size: 20px;
       }
     }
+
     &:nth-child(2) {
       img {
         max-width: 500px;
-        height: 100%;
       }
     }
     &:last-child {
       img {
+        margin: 120px 0 40px 0;
         max-width: 467px;
-        max-height: 440px;
-        height: 100%;
       }
     }
   }
 }
 
-@media only screen and(max-width: 1110px) {
+@media only screen and(max-width: 1051px) {
   .cryptocurrency {
     &__item {
+      flex-wrap: wrap;
+      justify-content: center;
+
       h2 {
         max-width: 100%;
+        font-size: 26px;
       }
-      justify-content: center;
-      flex-wrap: wrap;
 
       &:nth-child(2) {
         img {
           display: none;
+        }
+      }
+
+      &:last-child {
+        h2 {
+          order: 1;
         }
       }
     }

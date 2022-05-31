@@ -1,22 +1,27 @@
 <template>
   <section class="begin">
-    <span class="begin__hand">
+    <div class="begin__hand">
       <img src="../assets/images/phone/Phone.png" srcset="../assets/images/phone/Phone@2x.png" alt="hand" />
-    </span>
+    </div>
 
     <div class="begin__items">
-      <h2>Where to begin? With <b>simple steps</b></h2>
+      <h2>Where to begin? With <span>simple steps</span></h2>
 
       <article class="begin__item">
         <img src="../assets/images/download/download.png" srcset="../assets/images/download/download@2x.png" alt="download" />
+
         <p><a href="/">Download</a> a wallet</p>
       </article>
+
       <article class="begin__item">
         <img src="../assets/images/create/create.png" srcset="../assets/images/create/create@2x.png" alt="create" />
+
         <p>Create your own wallet</p>
       </article>
+
       <article class="begin__item _it">
         <img src="../assets/images/receive/receive.png" srcset="../assets/images/receive/receive@2x.png" alt="receive" />
+
         <p>Receive</p>
       </article>
     </div>
@@ -29,72 +34,73 @@ export default {}
 
 <style lang="scss" scoped>
 .begin {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: var(--scheme-v2);
-  margin: var(--scheme-gap) auto;
   max-width: var(--scheme-max-width-wrapper);
   padding: 20px;
 
   &__hand {
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    max-width: 366.33px;
     img {
-      max-width: 366.33px;
+      max-width: 366px;
+      width: 100%;
     }
     &::before {
-      background: red;
-      content: '';
-      position: absolute;
-      width: 477.37px;
-      height: 477.37px;
       background: linear-gradient(0deg, rgba(61, 118, 240, 0.26), rgba(61, 118, 240, 0.26)), radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(50, 66, 90, 0) 100%);
-      opacity: 0.4;
+      border-radius: 320px;
+      content: '';
       filter: blur(200px);
-      border-radius: 317.5px;
+      height: 600px;
+      left: 0;
+      max-width: 600px;
+      opacity: 0.4;
+      position: absolute;
+      right: 0;
+      top: 20px;
       z-index: -1;
     }
   }
 
   &__items {
-    width: 400px;
-
     h2 {
-      margin: 0 0 60px 0;
-    }
-    img {
-      max-width: 72px;
+      margin: 0 0 80px 0;
+      max-width: 399px;
 
-      margin: 0 20px 0 0;
+      span {
+        font-weight: bold;
+      }
     }
+
+    img {
+      margin: 0 20px 0 0;
+      max-width: 72px;
+    }
+
     p {
       color: var(--scheme-v2);
     }
   }
+
   &__item {
-    display: flex;
     align-items: center;
-    position: relative;
+    display: flex;
     margin: 20px 0;
+    position: relative;
 
     a {
       color: var(--scheme-v3);
     }
 
     &::after {
-      content: '';
       background-image: url('../assets/images/Line.png');
+      content: '';
       display: block;
-      position: absolute;
-      width: 24px;
       height: 2px;
-      transform: rotate(90deg);
       margin: 95px 0px 0 25px;
+      position: absolute;
+      transform: rotate(90deg);
+      width: 24px;
     }
 
     &:last-child::after {
@@ -106,21 +112,19 @@ export default {}
 @media only screen and(max-width:784px) {
   .begin {
     &__hand {
-      min-width: 281.92px;
+      margin-top: 120px;
       order: 1;
-      margin: 120px 0 0 0;
       transform: rotate(-10deg);
+
       img {
-        min-width: 281.92px;
+        min-width: 280px;
       }
     }
+
     &__items {
-      img {
-        min-width: 56px;
-      }
       h2 {
-        min-width: 205px;
-        font-size: 28px;
+        font-size: 27px;
+        min-width: 188px;
       }
     }
   }

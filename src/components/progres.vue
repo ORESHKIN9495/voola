@@ -14,22 +14,27 @@ export default {}
 
 <style lang="scss" scoped>
 .progress {
-  max-width: var(--scheme-max-width-wrapper);
   margin: 80px auto;
-  text-align: center;
+  max-width: var(--scheme-max-width-wrapper);
   padding: 20px;
-  h2 {
-    font-size: 44px;
-    color: var(--scheme-v2);
-    p {
-      font-size: 20px;
-      color: var(--scheme-v3);
-      margin: 40px 0 0 0;
-    }
+  text-align: center;
+
+  p {
+    color: var(--scheme-v3);
+    margin: 40px 0 20px 0;
   }
+
   img {
     max-width: 800px;
     width: 100%;
+  }
+}
+
+@media only screen and(max-width:740px) {
+  .progress {
+    h2 {
+      font-size: 28px;
+    }
   }
 }
 </style>

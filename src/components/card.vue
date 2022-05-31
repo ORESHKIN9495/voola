@@ -29,7 +29,7 @@
 
       <h3>Cryptocurrency exchange</h3>
 
-      <p>Cryptocurrency exchange</p>
+      <p>Anytime and anywhere 24/7</p>
     </article>
 
     <article class="card__item">
@@ -56,50 +56,45 @@ export default {}
 
 <style lang="scss" scoped>
 .card {
-  &__items {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
-    width: 100%;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
+  grid-gap: 40px;
 
   &__item {
-    background: rgb(255, 255, 255);
-    border-radius: 28px;
+    background: var(--scheme-v1);
+    backdrop-filter: blur(44px);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01), 0px 8px 18px rgba(0, 0, 0, 0.02);
-    padding: 28px 32px;
+    border-radius: 28px;
+    padding: 32px 28px;
 
     img {
-      width: 44px;
       height: 44px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+      width: 44px;
+    }
+    p {
+      margin-top: 10px;
     }
   }
 }
-@media only screen and(max-width:575px) {
+@media only screen and(max-width:580px) {
   .card {
+    grid-template-columns: none;
+
     &__item {
       text-align: center;
       padding: 20px;
 
       h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
         margin: 0;
       }
 
       img {
         margin-bottom: 5px;
-      }
-    }
-    &__items {
-      gap: 12px;
-      grid-template-columns: none;
-    }
-
-    &__logo {
-      transform: rotate(90deg);
-
-      img {
-        width: 869px;
       }
     }
   }
